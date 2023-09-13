@@ -47,6 +47,11 @@ jobs:
         with:
           pattern: "<your folder>/*.txt"
           suffix: "checksum"
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
 ```
 
 This workflow will be triggered on a push to the `main` branch. It will:
