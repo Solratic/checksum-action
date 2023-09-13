@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY action.py /app
 
-ENTRYPOINT ["python", "./action.py"]
+ENTRYPOINT ["./entrypoint.sh"]
