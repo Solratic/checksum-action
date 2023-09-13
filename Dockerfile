@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY action.py /app
 
-CMD ["python", "./action.py"]
+ENTRYPOINT ["python", "./action.py"]
