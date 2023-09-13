@@ -1,8 +1,7 @@
 FROM python:3.10-slim
 
-WORKDIR /app
 
-COPY entrypoint.sh /app
-COPY action.py /app
+COPY entrypoint.sh /entrypoint.sh
+COPY action.py /action.py
 
-ENTRYPOINT ["/app/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
