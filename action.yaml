@@ -1,6 +1,7 @@
 name: 'checksum-action'
 description: 'Generate checksums (SHA256) for multiple files'
-lables: activity
+icon: activity
+color: black
 inputs:
   pattern: 
     description: 'Pattern to search for files (glob)'
