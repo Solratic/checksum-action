@@ -1,0 +1,17 @@
+name: 'checksum-action'
+description: 'Generate checksums (SHA256) for multiple files'
+inputs:
+  pattern: 
+    description: 'Pattern to search for files (glob)'
+    required: true
+  suffix:
+    description:  'Suffix for the checksum files'
+    required: false
+    default: "checksum"
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.pattern }}
+    - ${{ inputs.suffix }}
