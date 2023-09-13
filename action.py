@@ -15,7 +15,6 @@ def compute_checksum(file_path: str):
 def main(pattern: str, suffix: str):
     for filename in glob.glob(pattern):
         parent, base = os.path.split(filename)
-        print(parent, base)
         checksum = compute_checksum(filename)
         with open(os.path.join(parent, f"{base}.{suffix}"), "w") as f:
             f.write(checksum)
